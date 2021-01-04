@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>GASTON</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../capstech_lib_v2/css/style.css" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../capstech_lib_v2/css/loading.css" type="text/css"/>
+        <!--<link rel="stylesheet" href="../../capstech_lib_v2/css/sticky_header.css" type="text/css"/>-->
+        <link rel="stylesheet" href="../../capstech_lib_v2/css/style_nav.css" type="text/css"/>
+        <link rel="stylesheet" href="../../capstech_lib_v2/css/expandableSearch.css" type="text/css"/>
+        <link rel="stylesheet" href="../../capstech_lib_v2/css/pagination.css" type="text/css"/>
+        <link rel="stylesheet" href="../../capstech_lib_v2/css/slider.css" type="text/css"/>
+        <link rel="stylesheet" href="css/bar.css" type="text/css"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+        
+        <link rel="stylesheet" href="css/style_modal.css" type="text/css"/>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.css">
+
+    </head>
+
+    <body onload="load()">
+        <div id="modals"></div>
+        <!--<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill-rule="evenodd" d="M13.25 2.5H2.75a.25.25 0 00-.25.25v10.5c0 .138.112.25.25.25h10.5a.25.25 0 00.25-.25V2.75a.25.25 0 00-.25-.25zM2.75 1h10.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0113.25 15H2.75A1.75 1.75 0 011 13.25V2.75C1 1.784 1.784 1 2.75 1zM8 4a.75.75 0 01.75.75v2.5h2.5a.75.75 0 010 1.5h-2.5v2.5a.75.75 0 01-1.5 0v-2.5h-2.5a.75.75 0 010-1.5h2.5v-2.5A.75.75 0 018 4z"></path></svg>-->
+        <script src="../../capstech_lib_v2/js/lib/sequential_load_libs.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/_init_lib.js"></script>
+
+        <!--<script src="../../capstech_lib_v2/js/lib/jquery.js"></script>
+        <script type="text/javascript" src="../../capstech_lib_v2/js/lib/jquery-ui.js"></script>
+        <script type="text/javascript" src="../../capstech_lib_v2/js/lib/bootstrap.js"></script>
+
+        <script type="text/javascript" src="../../capstech_lib_v2/js/lib/jquery-form.js"></script>
+        <script type="text/javascript" src="../../capstech_lib_v2/js/lib/notify.js"></script>
+        <script type="text/javascript" src="../../capstech_lib_v2/js/lib/service.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/_init_lib.js"></script>
+        <script src="../../capstech_lib_v2/js/class/html_fw.js"></script>
+        <script src="../../capstech_lib_v2/js/class/_list_of_class.js"></script>
+        <script src="../../capstech_lib_v2/js/class/config_class.js"></script>
+        <script src="../../capstech_lib_v2/js/class/filter_class.js"></script>
+        <script src="../../capstech_lib_v2/js/class/Row_element.js"></script>
+        <script src="../../capstech_lib_v2/js/class/_list_of_nn_tp.js"></script>
+        <script src="../../capstech_lib_v2/js/class/_table_row.js"></script>
+
+        <script src="../../capstech_lib_v2/js/class/_sub_row.js"></script>
+        <script src="../../capstech_lib_v2/js/class/global_const.js"></script>
+        <script src="../../capstech_lib_v2/js/class/Loader_class.js"></script>
+        <script src="../../capstech_lib_v2/js/class/Lib_row.js"></script>
+        
+        <script src="../../capstech_lib_v2/js/lib/loading.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/lib/jquery_ext.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/libTime.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/timer.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/buffer.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/raw_ui.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/modalWnd.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/detail_page.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/completionClient.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/completionArticle.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/completion.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/pagination.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/sidenav_menu.js"></script>
+        
+
+        <script src="../../capstech_lib_v2/js/lib/service.js"></script>
+        <script src="../../capstech_lib_v2/js/class/detail_wnd_class.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/toggle_menu.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/sticky_header.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/bootstrap.modal.wrapper.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/import_html.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/ui_util.js"></script>
+        <script src="../../capstech_lib_v2/js/lib/ext/ui_lib.js"></script>-->
+
+    </body>
+</html>

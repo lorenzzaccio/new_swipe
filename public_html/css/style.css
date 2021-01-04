@@ -1,0 +1,162 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 13 janv. 2017, 18:18:16
+    Author     : lorenzzaccio
+*/
+
+body {
+    font-size:12px;
+    font-family: 'Open Sans', sans-serif;
+    color: #353535;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.com_desc {
+    font-family: arial;
+    font-size: 12px;
+    color:orangered;
+    
+}
+
+.full-circle {
+ background-color: rgba(204, 0, 102, 0);
+ border: 4px solid #333;
+ text-align: center;
+ font-weight: 600;
+ -moz-border-radius:75px;
+ -webkit-border-radius: 75px;
+ padding:0px 5px 0px 5px;
+}
+
+.full-rect {
+ background-color: rgba(204, 0, 102, 0);
+ border: 4px solid #333;
+ text-align: center;
+ -moz-border-radius:5px;
+ -webkit-border-radius: 5px;
+}
+
+@page{
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+  .active {
+    display:inline-table;
+     background-color:orangered;
+      max-height: 100px;
+}
+
+.btn-filter{
+    font-size: 12px;
+}
+
+.btn-subrow{
+    display:inline-block;
+    padding-right: 10px;
+    margin-left: 10px;
+    vertical-align: top;
+}
+
+label {
+    float:left;
+    padding-top: 0px;
+    text-align: right;
+    width: 250px;
+    padding-right:10px;
+    font-family: roboto;
+    font-size: 12px;
+}
+
+.autocomplete-items{
+    background-color: aquamarine;
+    z-index: 10;
+    font-size:0.8em;
+    /*display: inline-block;*/
+    position:absolute;
+}
+.autocomplete-item:hover {
+  background-color: gold;
+}
+
+autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+
+.btn_sidebar{
+    float:left;
+    padding-top:5px;
+    font-size:40px;
+}
+
+.btn_add{
+    float:left;
+    font-size:40px;
+    color:white;
+    padding-top:5px;
+}
+
+.overlay_img{
+    width:50px;
+}
+
+.overlay_comment{
+    text-align:center;
+}
+
+.table_container{
+    z-index: 1;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.loader {
+    display: inline-block;
+  border: 4px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.msg_loader{
+    margin-top: -2%;
+    color: white;
+    font-weight: 700;
+    font-size: 0.8em;
+    background-color: inherit;
+}
+
+.loader_div{
+    text-align: center;
+    height: 50px;
+}
+
+#table_lbl_val{
+    width:auto;
+}

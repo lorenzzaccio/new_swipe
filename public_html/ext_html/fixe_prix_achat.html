@@ -1,0 +1,48 @@
+<div class="modal fade" id="fixe_prix_achat" tabindex="-1" role="dialog" aria-labelledby="add_offer_label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="fixePrixAchatModalLabel">Fixer le prix d'achat</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                            <div id="fixe_prix_achat_container" class="">
+                                <div id="new_ref_color" class="">
+                                    <div class="block"><label>N° de demande</label><input type="text" id="dem_num"></input>
+                                    <div class="block"> <label>Date de la demande</label><input type="text" id="dem_date"></input></div>
+                                    <div class="block"> <label>Type de demande</label>
+                                        <select id="dem_type_combo" onchange="select_type_demande()">
+                                        <option value="1">offre fournisseur</option>
+                                        <option value="2">offre calculé en interne</option>
+                                        <option value="3">fabrication interne</option>
+                                        <option value="4">commande sur stock</option>
+                                        </select>
+                                    </div>  
+                                    <div class="block"><label>Référence de l'offre fournisseur ou interne</label><input type="text" id="dem_ref_offre"></input></div>
+                                    <div class="block"><label>Quantité</label><input type="number" id="dem_quantity"></input></div>
+                                    <div class="block"><label>Prix d'achat</label><input type="text" id="dem_buy_price"></input></div>
+                                    <div class="block"> <label>Fournisseur</label>
+                                        <select id="dem_fourn_combo" onchange="select_fourn()">
+                                        <option value="1">Intercap</option>
+                                        <option value="2">Enoplastic</option>
+                                        <option value="3">Etiq Etain</option>
+                                        <option value="4">CapsTech</option>
+                                        <option value="5">Delage</option>
+                                        <option value="6">Coliège Metal Co</option>
+                                        </select>
+                                    </div> 
+                                    <div class="block"> <label>Remarques</label>
+                                        <textarea type="text" rows="10" cols="50" id="dem_rem"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="record_prix_achat()">Enregistrer</button>
+                    </div>
+                </div>
+        </div>
+</div>

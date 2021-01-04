@@ -1,0 +1,48 @@
+<div class="modal fade" id="ajouter_forfait" tabindex="-1" role="dialog" aria-labelledby="add_forfait_label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ajouterForfaitModalLabel">Ajouter un forfait</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                   <form id="forfait_form" action="../../capstech_lib/php/ajouter_forfait.php" method="GET">     
+                        <div class="modal-body">
+                                <div id="creer_offre_container" class="">
+                                    <div id="new_ref_color" class="">
+                                        <div class="block"><label>N° d'offre</label><input type="text" name="forfait_offre_num" id="forfait_offre_num" readonly></input></div>
+                                        <div class="block"> <label>Date de l'offre</label><input type="text" name="forfait_date" id="forfait_date"></input></div>
+                                        
+                                        <div class="block autocomplete"> 
+                                            <label>Article</label><input type="text" name="forfait_full_article" id="forfait_full_article" onkeyup="searchArticleList2('forfait_full_article', 0)"></input>
+                                            
+                                        </div>              
+                                        <div class="block"> <label>Type d'offre</label>
+                                            <select id="forfait_type_combo" onchange="select_type_forfait()">
+                                                <option value="150_1">forfait 1 000</option>
+                                                <option value="250_1">forfait 2 500</option>
+                                                <option value="300_1">forfait 5 000</option>
+                                                <option value="55_1000">forfait supérieur à 5 000</option>
+                                                <option value="60_1000">forfait orientation manuelle supérieur à 5 000</option>
+                                            </select>
+                                        </div>  
+                                        <div class="block"><label>Prix de vente</label><input type="number" step=1 name="forfait_sell_price" id="forfait_sell_price" ></input><input type="text"   id="forfait_unit" style="width:80px"></input></div>
+                                        <div class="block"><label>Libellé du forfait</label><input type="text" name="forfait_desc" id="forfait_desc"></input></div>
+                                        <input type="hidden" name="forfait_unity" id="forfait_unity"></input>
+                                        <input type="hidden" name="forfait_client_id" id="forfait_client_id"></input>
+                                        <input type="hidden" name="forfait_status" id="forfait_status"></input>
+                                    </div>
+                                </div>
+                                
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input  class="btn btn-primary" type="submit" value="ajouter un forfait" ></input> 
+                        </div>
+                    </form>
+                </div>
+                
+        </div>
+</div>

@@ -1,0 +1,96 @@
+input{
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #eee;
+    font-family: roboto;
+    font-size: 12px;
+    background: transparent;
+    background-color: aliceblue;
+}
+
+label {
+    /* float:left; */
+    /* padding-top: 0px; */
+    /* text-align: right; */
+    /* width: 250px; */
+    /* padding-right:10px; */
+    font-family: roboto;
+    font-size: 12px;
+}
+select {
+  text-align: right;
+  /*width: 200px;*/
+  padding-right:10px;
+  font-family: roboto;
+  font-size: 12px;
+  background-color: #68b5a66b;
+}
+
+.block{
+    margin-top:10px;
+    height:20px;
+    line-height:20px;
+}
+
+.block input{
+  float:right;
+  clear:both;
+}
+
+.block select{
+  float:right;
+  clear:both;
+}
+.block_1{
+  vertical-align:middle;
+  margin-top:10px;
+}
+
+.block_2 input{
+  	width: -webkit-fill-available;
+}
+
+.btn-new{
+    height: 25px;
+    width: 25px;
+    vertical-align: middle;
+    padding: 0;
+}
+.modal-backdrop {
+    /* bug fix - no overlay */    
+    display: none;    
+}
+
+#conditions{
+    width:100%;
+    display:flex; 
+    flex-direction: column; /* direction d'affichage verticale */
+    justify-content: center; /* alignement vertical */
+}
+#conditions input{
+    background-color:bisque;
+    margin:auto;
+    width: 75%;
+    height:auto;
+    margin: 0 auto;
+    margin-top:10px;
+}
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 45%;
+}
+
+.right {
+  width: 55%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}

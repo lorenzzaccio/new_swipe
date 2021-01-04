@@ -1,0 +1,53 @@
+<div class="modal fade" id="ajouter_cliche" tabindex="-1" role="dialog" aria-labelledby="add_cliche_label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ajouterClicheModalLabel">Ajouter un cliche</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                   <form id="cliche_form" action="../../capstech_lib/php/ajouter_cliche.php" method="GET">     
+                        <div class="modal-body">
+                                <div id="ajouter_cliche_container" class="">
+                                    <div id="new_ref_color" class="">
+                                        <div class="block"><label>N° d'offre</label><input type="text" name="cliche_offre_num" id="cliche_offre_num" readonly></input></div>
+                                        <div class="block"> <label>Date de l'offre</label><input type="text" name="cliche_date" id="cliche_date"></input></div>
+                                        
+                                        <div class="block autocomplete"> 
+                                            <label>Article</label><input type="text" name="cliche_full_article" id="cliche_full_article" onkeyup="searchArticleList2('cliche_full_article', 0)"></input>
+                                            
+                                        </div>              
+                                        <div class="block"> <label>Type d'offre</label>
+                                            <select id="cliche_type_combo" onchange="select_type_cliche()">
+                                                <option value="230_1">cliche MAC jupe</option>
+                                                <option value="180_1">cliche MAC tete à plat</option>
+                                                <option value="220_1">cliche MAC tete relief</option>
+                                                <option value="85_1">cliche TAMPO</option>
+                                                <option value="230_1">cliche BISTRA</option>
+                                                <option value="750_1">cliche HELIO</option>
+                                                <option value="7000_1">outil de découpe jupe</option>
+                                                <option value="80_1000">cliche MAC étiquette</option>
+                                                <option value="130_1000">frais de moule étiquette</option>
+                                                <option value="300_1">outil de découpe étiquette</option>
+                                            </select>
+                                        </div>  
+                                        <div class="block"><label>Prix de vente</label><input type="number" step=1 name="cliche_sell_price" id="cliche_sell_price" ></input><input type="text"   id="cliche_unit" style="width:80px"></input></div>
+                                        <div class="block"><label>Libellé du cliche</label><input type="text" name="cliche_desc" id="cliche_desc"></input></div>
+                                        <input type="hidden" name="cliche_unity" id="cliche_unity"></input>
+                                        <input type="hidden" name="cliche_client_id" id="cliche_client_id"></input>
+                                        <input type="hidden" name="cliche_status" id="cliche_status"></input>
+                                    </div>
+                                </div>
+                                
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input  class="btn btn-primary" type="submit" value="ajouter un cliche" ></input> 
+                        </div>
+                    </form>
+                </div>
+                
+        </div>
+</div>

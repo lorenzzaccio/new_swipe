@@ -1,0 +1,76 @@
+<div class="modal fade" id="creer_ordre_fournisseur" tabindex="-1" role="dialog" aria-labelledby="add_offer_label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="creerOrdreModalLabel">Créer un ordre fournisseur</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                   <form id="form_ordre_fourn" action="../../capstech_lib/php/create_ordre_fourn.php" method="POST">     <!---->
+                    <div class="modal-body">
+                            <div id="creer_ordre_fourn_container" class="">
+                                <div id="new_ref_color" class="">
+                                    <div class="block"><label>N° d'ordre fournisseur</label><input type="text" name="ordre_fourn_num" id="ordre_fourn_num" readonly></input>
+                                    <div class="block"> <label>Date de l'ordre</label><input type="text" name="ordre_fourn_date" id="ordre_fourn_date"></input></div>
+                                    <div class="block autocomplete"> 
+                                        
+                                        <label>Client</label><input name="ordre_fourn_client" type="text" id="client_combo"></input>
+                                        
+                                    </div>  
+                                    <div class="block autocomplete"> 
+                                        <label>Article</label><input type="text" name="ordre_full_article" id="article_combo" onkeyup="searchArticleList2('article_combo', 0)"></input>
+                                        
+                                    </div>              
+                                    <div class="block"> <label>Commercial</label>
+                                        <select id="agent_combo" onchange="get_new_demPrix_num($(this).val())">
+                                            <option value="1">Laurent GARNIER</option>
+                                            <option value="2">Jean-Claude GARNIER</option>
+                                            <option value="8">Pierre BOULEAU</option>
+                                            <option value="9">Emilie GOYARD</option>
+                                        </select>
+                                    </div>  
+                                    <div class="block"> <label>Type d'ordre</label>
+                                        <select id="ordre_fourn_type_combo"  onchange="select_type_ordre()">
+                                            <option value="1">commande fournisseur</option>
+                                            <option value="2">commande sur  appro client</option>
+                                            <option value="3">commande fabriquée en interne</option>
+                                            <option value="4">commande sur stock</option>
+                                        </select>
+                                       <input type="text" name="ordre_fourn_num_offre" id="ordre_fourn_num_offre" readonly=""></input>
+                                    </div>
+                                    <div class="block">
+                                        <label>N° de devis fournisseur</label><input type="text" name="ordre_fourn_ref" id="ordre_fourn_ref" ></input>
+                                    </div>  
+                                    <div class="block"><label>Quantité</label><input type="number" step=1 name="ordre_fourn_quantity" id="ordre_fourn_quantity"></input></div>
+                                    <div class="block"><label>Prix d'achat</label><input type="number" step=0.01 name="ordre_fourn_buy_price" id="ordre_fourn_buy_price" ></input></div>
+                                    <div class="block"><label>Titre de l'offre</label><input type="text" name="ordre_fourn_titre" id="ordre_fourn_titre"></input></div>
+                                    <div class="block">
+                                        <label>Conditions </label>
+                                        <div id="conditions" style="width: 100%;margin: 0 auto;">
+                                            <input type="text" name="ordre_fourn_cond_1" id="ordre_fourn_cond_1" value="Délai de livraison : 4 semaines à la commande, frais de livraison inclus,"></input>
+                                            <input type="text" name="ordre_fourn_cond_2" id="ordre_fourn_cond_2" value="Conditionnement par carton de 2 500 pièces,"></input>
+                                            <input type="text" name="ordre_fourn_cond_3" id="ordre_fourn_cond_3" value="Conditions de paiement : 45 jours fin de mois."></input>
+                                            <input type="text" name="ordre_fourn_cond_4" id="ordre_fourn_cond_4" value="Validité de l'offre : 6 mois."></input>
+                                            <input type="text" name="ordre_fourn_cond_5" id="ordre_fourn_cond_5" value=""></input>
+                                            <input type="hidden" name="ordre_fourn_status" id="ordre_fourn_status" value="2"></input>
+                                        </div>  
+                                    </div>
+                                    <div class="block"> <label>Remarques</label>
+                                        <div>
+                                        <textarea type="text" rows="10" cols="50" name="ordre_fourn_rem" id="ordre_fourn_rem"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <input  class="btn btn-primary" type="submit" value="ordre_fournisseur" ></input> 
+                    </div>
+                    </form>
+                </div>
+                
+        </div>
+</div>

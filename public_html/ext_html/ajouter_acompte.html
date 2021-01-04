@@ -1,0 +1,46 @@
+<div class="modal fade" id="ajouter_acompte" tabindex="-1" role="dialog" aria-labelledby="add_acompte_label" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="ajouterAcompteModalLabel">Ajouter un acompte</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                   <form id="acompte_form" action="" method="">     
+                        <div class="modal-body">
+                                <div id="ajouter_acompte_container" class="">
+                                    <div id="new_ref_color" class="">
+                                        <div class="block"><label>N° d'offre</label><input type="text" name="acompte_offre_num" id="acompte_offre_num" readonly></input></div>
+                                        <div class="block"> <label>Date de l'offre</label><input type="text" name="acompte_date" id="acompte_date"></input></div>
+                                        
+                                        <div class="block autocomplete"> 
+                                            <label>Article</label><input type="text" name="acompte_full_article" id="acompte_full_article" onkeyup="searchArticleList2('acompte_full_article', 0)"></input>
+                                            
+                                        </div>              
+                                        <div class="block"> <label>Type d'offre</label>
+                                            <select id="acompte_type_combo" onchange="select_type_acompte()">
+                                                <option value="25_1">acompte sur commande 25%</option>
+                                                <option value="50_1">acompte sur commande 50%</option>
+                                            </select>
+                                        </div>  
+                                        <div class="block"><label>Prix de vente</label><input type="number" step=1 name="acompte_sell_price" id="acompte_sell_price" ></input>
+                                            <input type="text"   id="acompte_unit" style="width:80px"></input></div>
+                                        <div class="block"><label>Libellé du acompte</label><input type="text" name="acompte_desc" id="acompte_desc"></input></div>
+                                        <input type="hidden" name="acompte_unity" id="acompte_unity"></input>
+                                        <input type="hidden" name="acompte_client_id" id="acompte_client_id"></input>
+                                        <input type="hidden" name="acompte_status" id="acompte_status"></input>
+                                    </div>
+                                </div>
+                                
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <input  class="btn btn-primary" type="submit" value="ajouter un acompte" ></input> 
+                        </div>
+                    </form>
+                </div>
+                
+        </div>
+</div>

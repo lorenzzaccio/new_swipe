@@ -1,0 +1,23 @@
+.ctrlTitleBar {
+    background: #FFC107;
+    color: #FFFFFF;
+    height: fit-content;
+    text-align: center;
+    width: 100%;
+    -webkit-transition: margin-left .5s;
+    -moz-transition: margin-left .5s;
+    -o-transition: margin-left .5s;
+    transition: margin-left .5s;
+}
+
+.ctrlTitleBar1 {
+    background: #86dc35;
+    color: #FFFFFF;
+    height: fit-content;
+    text-align: center;
+    width: 100%;
+    -webkit-transition: margin-left .5s;
+    -moz-transition: margin-left .5s;
+    -o-transition: margin-left .5s;
+    transition: margin-left .5s;
+}

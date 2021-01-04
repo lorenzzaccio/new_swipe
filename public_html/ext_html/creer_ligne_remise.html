@@ -1,0 +1,38 @@
+        <!-------modal créer une ligne d'avoir------------->
+                    <div class="modal fade" id="creer_ligne_remise" tabindex="-1" role="dialog" style="display: none; padding-left: 15px;" aria-labelledby="add_ordre_client_label" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="creerLigneRemiseModalLabel">Créer une ligne de remise</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <form id="form_ordre_client" action="" method="POST">     
+                                    <div class="modal-body">
+                                        <div id="creer_remise_container" class="container_order">
+                                                    <!--<label>N° d'offre</label><input type="text" name="offre_num" id="offre_num" readonly="" data-status="modify" style="color: rgb(255, 0, 0);">-->
+                                                    <div class="block"> <label>Date de la remise</label><input type="text" name="com_date_livraison" id="com_date_livraison"></div>
+                                                    <div class="block autocomplete"> <label>Client</label><input name="com_client_id" type="text" id="com_client_id"></div>  
+                                                    <div class="block"><label>Prix de vente</label><input type="number" step="0.01" name="com_prix_au_mille_ht_achat" id="com_prix_au_mille_ht_achat"></div>
+                                                    <div class="block"><label>Descriptif facture</label><input type="text" name="com_ref_article_client_fact" id="com_ref_article_client_fact"></div>
+                                                    
+                                                    <div class="block"> <label>Remarques</label>
+                                                        <div><textarea type="text" rows="10" cols="50" name="com_desc_ordre" id="com_desc_ordre"></textarea></div>
+                                                    </div>
+                                                    <input type="hidden" name="type_ordre" id="type_ordre" value="R00">
+                                                    <input type="hidden" name="com_prefix" id="com_prefix" value="R00">
+                                                    <input type="hidden" name="com_status_id" id="com_status_id" value="6">
+                                                    <input type="hidden" name="com_unite" id="com_unite" value="1">
+                                        </div>
+                    
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                                            <input class="btn btn-primary" type="submit" value="créer remise">
+                                        </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!--end of modal-->
